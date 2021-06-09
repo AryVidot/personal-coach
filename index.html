@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexi | Personal Coach</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button class="nav-toggle" aria-label="open navigation">
+          <span class="humburger">o</span>
+        </button>
+        <a href="#" class="logo">
+          <img src="./assets/Logo/Personal Coach.png" alt="Logo" srcset="" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link show-modal">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Modal starts here -->
+      <div class="container">
+        <div class="contact modal hidden" id="contact-form">
+          <button class="close-modal">x</button>
+          <h1>How can I help?</h1>
+          <form id="contact-form" method="POST" action="">
+            <input
+              type="text"
+              name="name"
+              class=""
+              placeholder="Name"
+              required
+            />
+            <br />
+            <input
+              type="email"
+              name="email"
+              class=""
+              placeholder="Email address"
+              required
+            />
+            <br />
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Hi Lexi, I would like ..."
+            ></textarea>
+            <br />
+            <input type="submit" class="" value="Send Message" required />
+          </form>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+      <!-- Modal ends here -->
+
+      <!-- Hero starts here -->
+      <section class="hero" id="hero">
+        <div class="row">
+          <div class="hero__text">
+            <h1>Become the best You</h1>
+            <p>
+              I help people become better versions of themselves, make honest
+              and authentic choices
+            </p>
+          </div>
+          <img
+            src="./assets/pexels-min-an-1134190.jpg"
+            alt="person with hands up in the air facing landscape"
+          />
+          <!-- Photo by Min an from pexels -->
+        </div>
+      </section>
+      <!-- Hero ends here -->
+
+      <main>
+        <!-- About section starts here -->
+        <section class="about" id="about">
+          <div class="row">
+            <img
+              src="./assets/Portraits/pexels-la-miko-3681609.jpg"
+              alt="woman smiling sitting on desk holding a book"
+              srcset=""
+            />
+            <!-- Photo by la Miko from Pexels -->
+            <div class="hero__text">
+              <h1>Hello, I'm Lexi your Coach</h1>
+              <p>
+                I provide services as a personal life coach, career coach. I
+                help people resolve issues related to their career, personal
+                life, life gaols. I help you become better versions of yourself,
+                make honest and authentic choices.
+              </p>
+              <p>
+                I've been coaching people to make positive change for over a
+                decade in all of these areas: Career, Habits, Self-Inquiry,
+                Stress Management, Relationships, Physical and Mental Health,
+                Spirituality.
+              </p>
+              <a href="#services" class="btn">Book Free Session*</a>
+              <!-- link to conatct form or login page (modal) -->
+            </div>
+          </div>
+        </section>
+        <!-- About section ends here -->
+
+        <!-- Services section starts here -->
+        <section class="service" id="services"></section>
+        <!-- About section ends here -->
+
+        <!-- testimonial section starts here -->
+        <section class="testimonial" id="testimonial">
+          <div class="grid"></div>
+        </section>
+        <!-- Testimonial section ends here -->
+      </main>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
