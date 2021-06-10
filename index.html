@@ -33,39 +33,49 @@
       </header>
 
       <!-- Modal starts here -->
-      <div class="container">
-        <div class="contact modal hidden" id="contact-form">
-          <button class="close-modal">x</button>
-          <h1>How can I help?</h1>
-          <form id="contact-form" method="POST" action="">
-            <input
-              type="text"
-              name="name"
-              class=""
-              placeholder="Name"
-              required
-            />
-            <br />
-            <input
-              type="email"
-              name="email"
-              class=""
-              placeholder="Email address"
-              required
-            />
-            <br />
-            <textarea
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Hi Lexi, I would like ..."
-            ></textarea>
-            <br />
-            <input type="submit" class="" value="Send Message" required />
-          </form>
+      <div class="contact-form">
+        <div class="contact-form-container">
+          <div class="modal hidden" id="contact-form">
+            <button class="close-modal">x</button>
+            <h1>How can I help?</h1>
+            <form id="contactForm" method="POST" action="" name="contact-form">
+              <div class="name">
+                <input id="name" type="text" name="name" required />
+                <label for="name" class="form__label">Name</label>
+              </div>
+              <div class="email">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="subject">
+                <input id="subject" type="text" name="subject" required />
+                <label for="subject" class="form__label">Subject</label>
+              </div>
+              <div class="message">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <label id="message" for="message" class="form__label"
+                  >Message</label
+                >
+              </div>
+              <div class="form-btn">
+                <button id="submit">Send</button>
+              </div>
+              <!-- <input type="submit" class="" value="Send Message" required /> -->
+            </form>
+          </div>
+          <div class="overlay hidden"></div>
         </div>
-        <div class="overlay hidden"></div>
       </div>
       <!-- Modal ends here -->
 

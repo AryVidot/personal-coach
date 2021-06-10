@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;1,600&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 2em;
+}
+
 *,
 ::before,
 ::after {
@@ -11,6 +20,11 @@
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .contact {
@@ -54,5 +68,116 @@
 
 .hidden {
   display: none;
+}
+
+.modal {
+  background-color: #f8dbc9;
+}
+
+.modal h1 {
+  font-size: 46px;
+}
+
+.close-modal {
+  font-size: 50px;
+  color: #033d68;
+}
+
+.contact-form-container {
+  width: 50%;
+  max-width: 800px;
+}
+
+.contact-form input {
+  width: 100%;
+  height: 100%;
+  padding: 0.625em;
+  margin-bottom: 1.875em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.2rem;
+  color: #033d68;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100%;
+  padding: 0.625em 0;
+  margin-bottom: 2.5em;
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  color: #033d68;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.0625em solid #000;
+}
+
+#submit {
+  border-bottom: none;
+  cursor: pointer;
+  background-color: #033d68;
+  color: #e9f1f7;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  padding: 0.9375em 0;
+  width: 100%;
+  outline: none;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.name,
+.email,
+.subject,
+.message {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0.625em;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #033d68;
+  transition: 0.5s;
+  pointer-events: none;
+  font-size: 24px;
+}
+
+.contact-form input:focus ~ label,
+.contact-form textarea:focus ~ label,
+.contact-form input:valid ~ label,
+.contact-form textarea:valid ~ label {
+  top: -0.75em;
+  left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:valid,
+.contact-form textarea:valid {
+  border-bottom: 0.0625em solid;
+  border-color: #033d68;
 }
 /*# sourceMappingURL=main.css.map */

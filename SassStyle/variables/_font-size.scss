@@ -1,3 +1,14 @@
+$xlarge-heading: 46px;
 $large-heading: 32px;
 $medium-heading: 24px;
 $small-heading: 18px;
+
+// Padding
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 2em;
+}
