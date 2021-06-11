@@ -1,2 +1,10 @@
 // Playfair Display + Montserrat
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;1,600&display=swap");
+
+// Font-family
+$title-ft: "Playfair Display", serif;
+$body-ft: "Montserrat", sans-serif;
+
+p {
+  font-family: $body-ft;
+}

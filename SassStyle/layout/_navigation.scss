@@ -1,0 +1,141 @@
+header {
+  background: $background-clr;
+  padding: 1em 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.logo {
+  width: auto;
+  align-items: center;
+  img {
+    width: 70px;
+    max-width: 100%;
+  }
+}
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  z-index: 2;
+}
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+.nav--toggled {
+  height: 100vh;
+  overflow: hidden;
+}
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+.nav__link {
+  text-decoration: none;
+  color: $primary-clr;
+  text-transform: uppercase;
+  font-size: $medium-heading;
+  font-family: $title-ft;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.75;
+  display: inline-block;
+  border-color: $primary-clr;
+}
+
+.nav__item {
+  margin-top: 0.75em;
+}
+.nav__item::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: $primary-clr;
+  transition: width 0.3s;
+}
+.nav__item:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+  display: block;
+}
+
+// Hamburger
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  //   border-radius: 50%;
+  background: $background-clr;
+  //   background-color: green;
+  color: $primary-clr;
+  transition: opacity 250ms ease;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  border-radius: 15%;
+  background: $primary-clr;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+  color: white;
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+@media (min-width: $tablet) {
+  header {
+    box-shadow: 0 0 2px 0 $primary-clr;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+    .nav__list {
+      display: flex;
+      margin: 0;
+    }
+  }
+  .nav__item {
+    margin: 0 0 0 1.5em;
+  }
+}

@@ -45,14 +45,15 @@
   outline: none;
   border: none;
   background-color: transparent;
-  border-bottom: 0.0625em solid #000;
+  border-bottom: 0.0625em solid;
+  border-color: $primary-clr;
 }
 
 #submit {
   border-bottom: none;
   cursor: pointer;
   background-color: $primary-clr;
-  color: #e9f1f7;
+  color: $background-clr;
   margin-bottom: 1em;
   text-transform: uppercase;
   font-weight: 700;

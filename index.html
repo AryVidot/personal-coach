@@ -4,21 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const yrSpan = document.querySelector(".year");
+        const currentYear = new Date().getFullYear();
+        yrSpan.textContent = currentYear;
+      });
+    </script>
     <title>Lexi | Personal Coach</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
+    <!-- Modal starts here -->
+    <div class="contact-form">
+      <div class="contact-form-container">
+        <div class="modal hidden" id="contact-form">
+          <button class="close-modal">x</button>
+          <h1>How can I help?</h1>
+          <form id="contactForm" method="POST" action="" name="contact-form">
+            <div class="name">
+              <input id="name" type="text" name="name" required />
+              <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="email">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="off"
+                required
+              />
+              <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="subject">
+              <input id="subject" type="text" name="subject" required />
+              <label for="subject" class="form__label">Subject</label>
+            </div>
+            <div class="message">
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                required
+              ></textarea>
+              <label id="message" for="message" class="form__label"
+                >Message</label
+              >
+            </div>
+            <div class="form-btn">
+              <button id="submit">Send</button>
+            </div>
+            <!-- <input type="submit" class="" value="Send Message" required /> -->
+          </form>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </div>
+    <!-- Modal ends here -->
+
+    <header class="fixed">
+      <div class="container row">
         <button class="nav-toggle" aria-label="open navigation">
-          <span class="humburger">o</span>
+          <span class="hamburger"></span>
         </button>
-        <a href="#" class="logo">
-          <img src="./assets/Logo/Personal Coach.png" alt="Logo" srcset="" />
-        </a>
+        <div>
+          <a href="#" class="logo">
+            <img src="./assets/Logo/Personal Coach.png" alt="Logo" srcset="" />
+          </a>
+        </div>
         <nav class="nav">
           <ul class="nav__list nav__list--primary">
-            <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a href="#hero" class="nav__link">Home</a>
+            </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
             </li>
@@ -30,116 +88,83 @@
             </li>
           </ul>
         </nav>
-      </header>
-
-      <!-- Modal starts here -->
-      <div class="contact-form">
-        <div class="contact-form-container">
-          <div class="modal hidden" id="contact-form">
-            <button class="close-modal">x</button>
-            <h1>How can I help?</h1>
-            <form id="contactForm" method="POST" action="" name="contact-form">
-              <div class="name">
-                <input id="name" type="text" name="name" required />
-                <label for="name" class="form__label">Name</label>
-              </div>
-              <div class="email">
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  autocomplete="off"
-                  required
-                />
-                <label for="email" class="form__label">Email</label>
-              </div>
-              <div class="subject">
-                <input id="subject" type="text" name="subject" required />
-                <label for="subject" class="form__label">Subject</label>
-              </div>
-              <div class="message">
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="5"
-                  required
-                ></textarea>
-                <label id="message" for="message" class="form__label"
-                  >Message</label
-                >
-              </div>
-              <div class="form-btn">
-                <button id="submit">Send</button>
-              </div>
-              <!-- <input type="submit" class="" value="Send Message" required /> -->
-            </form>
-          </div>
-          <div class="overlay hidden"></div>
-        </div>
       </div>
-      <!-- Modal ends here -->
+    </header>
 
-      <!-- Hero starts here -->
-      <section class="hero" id="hero">
-        <div class="row">
-          <div class="hero__text">
-            <h1>Become the best You</h1>
+    <!-- Hero starts here -->
+    <section class="hero" id="hero">
+      <div class="container row">
+        <div class="hero__text">
+          <h1>Become the best You</h1>
+          <p>
+            I help people become better versions of themselves, make honest and
+            authentic choices
+          </p>
+          <a href="#services" class="btn">Book Your Free Session*</a>
+          <!-- link to conatct form or login page (modal) -->
+        </div>
+        <img
+          class="hero__img"
+          src="./assets/pexels-min-an-1134190.jpg"
+          alt="person with hands up in the air facing landscape"
+        />
+        <!-- Photo by Min an from pexels -->
+      </div>
+    </section>
+    <!-- Hero ends here -->
+
+    <main>
+      <!-- About section starts here -->
+      <section class="about" id="about">
+        <div class="container row">
+          <img
+            class="about__img"
+            src="./assets/Portraits/pexels-la-miko-3681609.jpg"
+            alt="woman smiling sitting on desk holding a book"
+            srcset=""
+          />
+          <!-- Photo by la Miko from Pexels -->
+          <div class="about__text">
+            <h1>Hello, I'm Lexi your Coach</h1>
             <p>
-              I help people become better versions of themselves, make honest
-              and authentic choices
+              I provide services as a personal life coach, career coach. I help
+              people resolve issues related to their career, personal life, life
+              gaols. I help you become better versions of yourself, make honest
+              and authentic choices.
+            </p>
+            <p>
+              I've been coaching people to make positive change for over a
+              decade in all of these areas: Career, Habits, Self-Inquiry, Stress
+              Management, Relationships, Physical and Mental Health,
+              Spirituality.
             </p>
           </div>
-          <img
-            src="./assets/pexels-min-an-1134190.jpg"
-            alt="person with hands up in the air facing landscape"
-          />
-          <!-- Photo by Min an from pexels -->
         </div>
       </section>
-      <!-- Hero ends here -->
+      <!-- About section ends here -->
 
-      <main>
-        <!-- About section starts here -->
-        <section class="about" id="about">
-          <div class="row">
-            <img
-              src="./assets/Portraits/pexels-la-miko-3681609.jpg"
-              alt="woman smiling sitting on desk holding a book"
-              srcset=""
-            />
-            <!-- Photo by la Miko from Pexels -->
-            <div class="hero__text">
-              <h1>Hello, I'm Lexi your Coach</h1>
-              <p>
-                I provide services as a personal life coach, career coach. I
-                help people resolve issues related to their career, personal
-                life, life gaols. I help you become better versions of yourself,
-                make honest and authentic choices.
-              </p>
-              <p>
-                I've been coaching people to make positive change for over a
-                decade in all of these areas: Career, Habits, Self-Inquiry,
-                Stress Management, Relationships, Physical and Mental Health,
-                Spirituality.
-              </p>
-              <a href="#services" class="btn">Book Free Session*</a>
-              <!-- link to conatct form or login page (modal) -->
-            </div>
-          </div>
-        </section>
-        <!-- About section ends here -->
+      <!-- Services section starts here -->
+      <section class="service" id="services">
+        <div class="container row"></div>
+      </section>
+      <!-- About section ends here -->
 
-        <!-- Services section starts here -->
-        <section class="service" id="services"></section>
-        <!-- About section ends here -->
-
-        <!-- testimonial section starts here -->
-        <section class="testimonial" id="testimonial">
+      <!-- testimonial section starts here -->
+      <section class="testimonial" id="testimonial">
+        <div class="container row">
           <div class="grid"></div>
-        </section>
-        <!-- Testimonial section ends here -->
-      </main>
-    </div>
+        </div>
+      </section>
+      <!-- Testimonial section ends here -->
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>
+          <span class="year">2020</span> - <a href="#hero">Lexi Pearson</a
+          ><span class="dot">.</span> All rights reserved
+        </p>
+      </div>
+    </footer>
   </body>
   <script src="main.js"></script>
 </html>

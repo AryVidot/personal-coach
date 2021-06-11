@@ -1,0 +1,16 @@
+// Media
+@media (min-width: $tablet) {
+  .about {
+    padding: 100px 0;
+    background-color: $primary-clr;
+    color: $background-clr;
+  }
+  .about__text {
+    width: 32%;
+  }
+  .about__img {
+    width: 62%;
+    align-self: flex-start;
+    margin: 0;
+  }
+}

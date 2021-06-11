@@ -1,0 +1,18 @@
+.hero {
+  padding: 25px 0;
+}
+
+// Media
+@media (min-width: $tablet) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__text {
+    width: 62%;
+  }
+  .hero__img {
+    width: 32%;
+    align-self: flex-start;
+    margin: 0;
+  }
+}

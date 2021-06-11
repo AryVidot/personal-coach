@@ -5,14 +5,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $background-clr;
+  position: relative;
 }
 
-a {
-  list-style: none;
-  text-decoration: none;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
 }

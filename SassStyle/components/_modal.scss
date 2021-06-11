@@ -1,18 +1,21 @@
-.contact {
-  position: relative;
-}
+// .contact-form-container {
+//   position: relative;
+// }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: white;
+  width: 60%;
+  background-color: $primary-clr;
   padding: 6rem;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 1001;
+  h1 {
+    color: $primary-clr;
+  }
 }
 
 .close-modal {
@@ -33,8 +36,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 1000;
 }
 .hidden {
   display: none;
+}
+
+@media (min-width: 800px) {
 }

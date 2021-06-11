@@ -5,7 +5,11 @@ h3,
 h4,
 h5,
 h6 {
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 *,
@@ -16,19 +20,24 @@ h6 {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8dbc9;
+  position: relative;
+}
+
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-}
-
-.contact {
   position: relative;
+}
+
+img {
+  max-width: 100%;
 }
 
 .modal {
@@ -36,12 +45,16 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: white;
+  width: 60%;
+  background-color: #033d68;
   padding: 6rem;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 1001;
+}
+
+.modal h1 {
+  color: #033d68;
 }
 
 .close-modal {
@@ -63,11 +76,165 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 1000;
 }
 
 .hidden {
   display: none;
+}
+
+header {
+  background: #f8dbc9;
+  padding: 1em 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: auto;
+  align-items: center;
+}
+
+.logo img {
+  width: 70px;
+  max-width: 100%;
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav--toggled {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #033d68;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.75;
+  display: inline-block;
+  border-color: #033d68;
+}
+
+.nav__item {
+  margin-top: 0.75em;
+}
+
+.nav__item::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #033d68;
+  transition: width 0.3s;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+  display: block;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  background: #f8dbc9;
+  color: #033d68;
+  transition: opacity 250ms ease;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  border-radius: 15%;
+  background: #033d68;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+  color: white;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+@media (min-width: 768px) {
+  header {
+    box-shadow: 0 0 2px 0 #033d68;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+  }
+  .nav .nav__list {
+    display: flex;
+    margin: 0;
+  }
+  .nav__item {
+    margin: 0 0 0 1.5em;
+  }
 }
 
 .modal {
@@ -118,14 +285,15 @@ a {
   outline: none;
   border: none;
   background-color: transparent;
-  border-bottom: 0.0625em solid #000;
+  border-bottom: 0.0625em solid;
+  border-color: #033d68;
 }
 
 #submit {
   border-bottom: none;
   cursor: pointer;
   background-color: #033d68;
-  color: #e9f1f7;
+  color: #f8dbc9;
   margin-bottom: 1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -179,5 +347,46 @@ button:hover {
 .contact-form textarea:valid {
   border-bottom: 0.0625em solid;
   border-color: #033d68;
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  padding: 25px 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__text {
+    width: 62%;
+  }
+  .hero__img {
+    width: 32%;
+    align-self: flex-start;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 100px 0;
+    background-color: #033d68;
+    color: #f8dbc9;
+  }
+  .about__text {
+    width: 32%;
+  }
+  .about__img {
+    width: 62%;
+    align-self: flex-start;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
