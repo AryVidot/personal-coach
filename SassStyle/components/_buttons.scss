@@ -1,0 +1,14 @@
+.btn {
+  font-family: $body-ft;
+  text-decoration: none;
+  padding: 1.5rem;
+  background-color: $primary-clr;
+  color: $background-clr;
+  //   border-radius: 10px;
+  font-size: $small-heading;
+  transition: 0.3s;
+}
+.btn:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}

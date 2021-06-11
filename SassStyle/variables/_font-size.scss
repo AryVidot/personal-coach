@@ -1,7 +1,7 @@
-$xlarge-heading: 46px;
-$large-heading: 32px;
-$medium-heading: 24px;
-$small-heading: 18px;
+$xlarge-heading: 2.875rem;
+$large-heading: 2rem;
+$medium-heading: 1.5rem;
+$small-heading: 1.125rem;
 
 // Padding
 h1,
@@ -10,5 +10,19 @@ h3,
 h4,
 h5,
 h6 {
-  padding-bottom: 1.5em;
+  padding-bottom: 1rem;
+}
+
+// Heading Size
+h1 {
+  font-size: $xlarge-heading;
+}
+
+h2 {
+  font-size: $large-heading;
+}
+
+p {
+  font-size: $medium-heading;
+  line-height: 1.5em;
 }
