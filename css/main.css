@@ -444,10 +444,10 @@ footer a {
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
   }
 }
 
