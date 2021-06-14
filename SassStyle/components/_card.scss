@@ -10,6 +10,9 @@
     }
   }
 }
+.card + .card {
+  margin-top: 1.5rem;
+}
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -17,6 +20,11 @@
 
 @media (min-width: $tablet) {
   .card {
-    width: 45%;
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+  .card + .card {
+    margin-top: 0;
+    // margin-left: 1rem;
   }
 }

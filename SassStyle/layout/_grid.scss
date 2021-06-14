@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+  // grid-template-rows: ;
+  box-sizing: border-box;
+  .testimonial-card {
+    padding: 1rem;
+    // border: 1px solid red;
+  }
+}
+
+// Media
+@media (min-width: $tablet) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

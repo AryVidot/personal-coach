@@ -7,7 +7,7 @@
     &::after {
       content: "";
       display: block;
-      border: 2px solid;
+      border: 1px solid;
       border-color: $background-clr;
       margin-top: 0.5em;
       width: 50%;
@@ -19,12 +19,13 @@
 }
 
 // Media
-
 @media (min-width: $tablet) {
   .about__text {
     width: 32%;
     h1 {
-      margin-bottom: 1.5em;
+      margin-top: 0;
+
+      font-size: $xlarge-heading;
     }
     p {
       line-height: 1.7;

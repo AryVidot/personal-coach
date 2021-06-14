@@ -1,9 +1,12 @@
 .row {
   width: 90%;
 }
+
+// Media
 @media (min-width: $tablet) {
   .row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 }

@@ -8,3 +8,18 @@ $body-ft: "Montserrat", sans-serif;
 p {
   font-family: $body-ft;
 }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1em;
+  h1 {
+    &::after {
+      content: "";
+      display: block;
+      border: 1px solid;
+      border-color: $background-clr;
+      margin-top: 0.5em;
+      width: 20%;
+    }
+  }
+}
