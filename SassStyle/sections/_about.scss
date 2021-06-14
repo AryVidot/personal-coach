@@ -1,16 +1,38 @@
-// Media
-@media (min-width: $tablet) {
-  .about {
-    padding: 100px 0;
-    background-color: $primary-clr;
-    color: $background-clr;
+.about__text {
+  width: 100%;
+  h1 {
+    font-size: $large-heading;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    &::after {
+      content: "";
+      display: block;
+      border: 2px solid;
+      border-color: $background-clr;
+      margin-top: 0.5em;
+      width: 50%;
+    }
   }
+  p {
+    line-height: 1.3;
+  }
+}
+
+// Media
+
+@media (min-width: $tablet) {
   .about__text {
     width: 32%;
+    h1 {
+      margin-bottom: 1.5em;
+    }
+    p {
+      line-height: 1.7;
+    }
   }
   .about__img {
     width: 62%;
     align-self: flex-start;
-    margin: 0;
+    // margin: 0;
   }
 }

@@ -2,3 +2,9 @@
 $background-clr: #f8dbc9;
 
 $primary-clr: #033d68;
+
+// Accent
+.accent {
+  background-color: $primary-clr;
+  color: $background-clr;
+}

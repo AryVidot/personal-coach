@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;1,600&display=swap");
+.accent {
+  background-color: #033d68;
+  color: #f8dbc9;
+}
+
 h1,
 h2,
 h3,
@@ -53,69 +58,42 @@ img {
   max-width: 100%;
 }
 
+section {
+  padding: 50px 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px 0;
+  }
+}
+
 .btn {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   padding: 1.5rem;
   background-color: #033d68;
   color: #f8dbc9;
-  font-size: 1.125rem;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.9;
-  transition: 0.3s;
+  opacity: 0.7;
+  transition: all 0.3s;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  background-color: #033d68;
-  padding: 6rem;
-  border-radius: 15px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 1001;
-}
-
-.modal h1 {
-  color: #033d68;
-}
-
-.close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 1000;
-}
-
-.hidden {
-  display: none;
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1.125rem;
+  }
 }
 
 .card {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 45%;
+  width: 100%;
 }
 
 .card .card__container {
@@ -128,6 +106,12 @@ img {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
 }
 
 header {
@@ -284,21 +268,15 @@ header {
   }
 }
 
-.modal {
-  background-color: #f8dbc9;
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-.modal h1 {
-  font-size: 2.875rem;
-}
-
-.close-modal {
-  font-size: 50px;
-  color: #033d68;
-}
-
-.contact-form-container {
-  width: 50%;
+.contact-form .contact-form-container {
+  width: 90%;
   max-width: 800px;
 }
 
@@ -397,6 +375,17 @@ button:hover {
 }
 
 @media (min-width: 768px) {
+  .contact-form-container {
+    width: 70%;
+    max-width: 900px;
+  }
+}
+
+.row {
+  width: 90%;
+}
+
+@media (min-width: 768px) {
   .row {
     display: flex;
     justify-content: space-between;
@@ -404,19 +393,47 @@ button:hover {
 }
 
 .hero {
-  padding: 25px 0;
+  height: 90vh;
+  padding: 0;
+  margin: 0;
 }
 
-.hero p {
-  padding-bottom: 1.5em;
+.hero__image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/pexels-min-an-1134190.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero__text {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f8dbc9;
+}
+
+.hero__text h1 {
+  font-size: 2.875rem;
+}
+
+.hero__text p {
+  margin-bottom: 2em;
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding: 100px 0;
-  }
   .hero__text {
-    width: 62%;
+    width: 80%;
+  }
+  .hero__text h1 {
+    font-size: 3.55rem;
+  }
+  .hero__text p {
+    margin-bottom: 2em;
   }
   .hero__img {
     width: 32%;
@@ -425,19 +442,42 @@ button:hover {
   }
 }
 
+.about__text {
+  width: 100%;
+}
+
+.about__text h1 {
+  font-size: 2rem;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.about__text h1::after {
+  content: "";
+  display: block;
+  border: 2px solid;
+  border-color: #f8dbc9;
+  margin-top: 0.5em;
+  width: 50%;
+}
+
+.about__text p {
+  line-height: 1.3;
+}
+
 @media (min-width: 768px) {
-  .about {
-    padding: 100px 0;
-    background-color: #033d68;
-    color: #f8dbc9;
-  }
   .about__text {
     width: 32%;
+  }
+  .about__text h1 {
+    margin-bottom: 1.5em;
+  }
+  .about__text p {
+    line-height: 1.7;
   }
   .about__img {
     width: 62%;
     align-self: flex-start;
-    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

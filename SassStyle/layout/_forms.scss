@@ -1,17 +1,23 @@
-.modal {
-  background-color: $background-clr;
-  h1 {
-    font-size: $xlarge-heading;
-  }
-}
+// .modal {
+//   background-color: $background-clr;
+//   h1 {
+//     font-size: $xlarge-heading;
+//   }
+// }
 
-.close-modal {
-  font-size: 50px;
-  color: $primary-clr;
-}
-.contact-form-container {
-  width: 50%;
-  max-width: 800px;
+// .close-modal {
+//   font-size: 50px;
+//   color: $primary-clr;
+// }
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .contact-form-container {
+    width: 90%;
+    max-width: 800px;
+  }
 }
 
 .contact-form input {
@@ -107,4 +113,12 @@ button:hover {
 .contact-form textarea:valid {
   border-bottom: 0.0625em solid;
   border-color: $primary-clr;
+}
+
+// Media
+@media (min-width: $tablet) {
+  .contact-form-container {
+    width: 70%;
+    max-width: 900px;
+  }
 }

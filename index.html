@@ -15,53 +15,6 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- Modal starts here -->
-    <div class="contact-form">
-      <div class="contact-form-container">
-        <div class="modal hidden" id="contact-form">
-          <button class="close-modal">x</button>
-          <h1>How can I help?</h1>
-          <form id="contactForm" method="POST" action="" name="contact-form">
-            <div class="name">
-              <input id="name" type="text" name="name" required />
-              <label for="name" class="form__label">Name</label>
-            </div>
-            <div class="email">
-              <input
-                id="email"
-                type="email"
-                name="email"
-                autocomplete="off"
-                required
-              />
-              <label for="email" class="form__label">Email</label>
-            </div>
-            <div class="subject">
-              <input id="subject" type="text" name="subject" required />
-              <label for="subject" class="form__label">Subject</label>
-            </div>
-            <div class="message">
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                required
-              ></textarea>
-              <label id="message" for="message" class="form__label"
-                >Message</label
-              >
-            </div>
-            <div class="form-btn">
-              <button id="submit">Send</button>
-            </div>
-            <!-- <input type="submit" class="" value="Send Message" required /> -->
-          </form>
-        </div>
-        <div class="overlay hidden"></div>
-      </div>
-    </div>
-    <!-- Modal ends here -->
-
     <header class="fixed">
       <div class="container row">
         <button class="nav-toggle" aria-label="open navigation">
@@ -93,30 +46,34 @@
 
     <!-- Hero starts here -->
     <section class="hero" id="hero">
-      <div class="container row">
+      <div class="hero__image">
         <div class="hero__text">
           <h1>Become the best You</h1>
           <p>
             I help people become better versions of themselves, make honest and
-            authentic choices
+            authentic choices.
           </p>
-          <a href="#services" class="btn">Book Your Free Session*</a>
-          <!-- link to conatct form or login page (modal) -->
+          <div>
+            <a href="#services" class="btn">Book Your Free Session*</a>
+            <!-- link to contact form or login page (modal) -->
+          </div>
         </div>
+      </div>
+      <!-- <div class="container row">
         <img
           class="hero__img"
           src="./assets/pexels-min-an-1134190.jpg"
           alt="person with hands up in the air facing landscape"
         />
-        <!-- Photo by Min an from pexels -->
-      </div>
+      </div> -->
     </section>
     <!-- Hero ends here -->
 
     <main>
+
       <!-- About section starts here -->
-      <section class="about" id="about">
-        <div class="container row">
+      <section class="about accent" id="about">
+        <div class="container row ">
           <img
             class="about__img"
             src="./assets/Portraits/pexels-la-miko-3681609.jpg"
@@ -146,8 +103,9 @@
 
       <!-- Services section starts here -->
       <section class="service" id="services">
-        <div class="container row">
-          <div class="grid">
+        <div class="container">
+          <h1 class="section-title">My Services</h1>
+          <div class="row">
             <div class="card">
               <img
                 src="./assets/Images/career-pexels-cottonbro-4065876.jpg"
@@ -207,7 +165,7 @@
                 <p>
                   Find your true calling and create a plan to make it happen.
                 </p>
-                <p><button class="btn">Book a Session*</button></p>
+                <div></div><button class="btn">Book a Session*</button></p>
                 <!-- <a href="#contact" class="btn">Book a Session*</a> -->
               </div>
             </div>
@@ -217,10 +175,112 @@
       <!-- About section ends here -->
 
       <!-- testimonial section starts here -->
-      <section class="testimonial" id="testimonial">
-        <div class="container row"></div>
+      <section class="testimonial accent" id="testimonial">
+        <div class="container">
+          <h1 class="section-title" >Testimonial</h1>
+        <div class="grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__reviewer flex">
+              <img src="./assets/Portraits/image-daniel.jpg" alt="">
+              <p class="testimonial-card__reviewer--name"></p>
+              <p class="testimonial-card__reviewer--profession"></p>
+            </div>
+            <div class="testimonial-card__content">
+              <p>Boom ipsum dolor, sit amet consectetur adipisicing elit. Hic illum natus sed porro officia inventore quae aliquid autem, corrupti, dolore, dignissimos distinctio earum praesentium ducimus quo neque tenetur est quas atque molestiae officiis voluptatibus minus esse? Inventore fuga molestias fugit.</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__reviewer flex">
+              <img src="./assets/Portraits/image-daniel.jpg" alt="">
+              <p class="testimonial-card__reviewer--name"></p>
+              <p class="testimonial-card__reviewer--profession"></p>
+            </div>
+            <div class="testimonial-card__content">
+              <p>Boom ipsum dolor, sit amet consectetur adipisicing elit. Hic illum natus sed porro officia inventore quae aliquid autem, corrupti, dolore, dignissimos distinctio earum praesentium ducimus quo neque tenetur est quas atque molestiae officiis voluptatibus minus esse? Inventore fuga molestias fugit.</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__reviewer flex">
+              <img src="./assets/Portraits/image-daniel.jpg" alt="">
+              <p class="testimonial-card__reviewer--name"></p>
+              <p class="testimonial-card__reviewer--profession"></p>
+            </div>
+            <div class="testimonial-card__content">
+              <p>Boom ipsum dolor, sit amet consectetur adipisicing elit. Hic illum natus sed porro officia inventore quae aliquid autem, corrupti, dolore, dignissimos distinctio earum praesentium ducimus quo neque tenetur est quas atque molestiae officiis voluptatibus minus esse? Inventore fuga molestias fugit.</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__reviewer flex">
+              <img src="./assets/Portraits/image-daniel.jpg" alt="">
+              <p class="testimonial-card__reviewer--name"></p>
+              <p class="testimonial-card__reviewer--profession"></p>
+            </div>
+            <div class="testimonial-card__content">
+              <p>Boom ipsum dolor, sit amet consectetur adipisicing elit. Hic illum natus sed porro officia inventore quae aliquid autem, corrupti, dolore, dignissimos distinctio earum praesentium ducimus quo neque tenetur est quas atque molestiae officiis voluptatibus minus esse? Inventore fuga molestias fugit.</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__reviewer flex">
+              <img src="./assets/Portraits/image-daniel.jpg" alt="">
+              <p class="testimonial-card__reviewer--name"></p>
+              <p class="testimonial-card__reviewer--profession"></p>
+            </div>
+            <div class="testimonial-card__content">
+              <p>Boom ipsum dolor, sit amet consectetur adipisicing elit. Hic illum natus sed porro officia inventore quae aliquid autem, corrupti, dolore, dignissimos distinctio earum praesentium ducimus quo neque tenetur est quas atque molestiae officiis voluptatibus minus esse? Inventore fuga molestias fugit.</p>
+            </div>
+          </div>
+        </div>
+
+                
+        </div>
       </section>
       <!-- Testimonial section ends here -->
+      <!-- Modal starts here -->
+      <section class="contact-form">
+        <div class="container contact-form-container">
+          <div class="modal" id="contact-form">
+            <!-- <button class="close-modal">x</button> -->
+            <h1>How can I help?</h1>
+            <form id="contactForm" method="POST" action="" name="contact-form">
+              <div class="name">
+                <input id="name" type="text" name="name" required />
+                <label for="name" class="form__label">Name</label>
+              </div>
+              <div class="email">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="subject">
+                <input id="subject" type="text" name="subject" required />
+                <label for="subject" class="form__label">Subject</label>
+              </div>
+              <div class="message">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <label id="message" for="message" class="form__label"
+                  >Message</label
+                >
+              </div>
+              <div class="form-btn">
+                <button id="submit" class="btn">Send</button>
+              </div>
+              <!-- <input type="submit" class="" value="Send Message" required /> -->
+            </form>
+          </div>
+          <!-- <div class="overlay hidden"></div> -->
+        </div>
+      </section>
+      <!-- Modal ends here -->
     </main>
     <footer>
       <div class="copyright">
