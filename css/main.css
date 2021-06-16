@@ -160,6 +160,7 @@ section {
 
 .fa:hover {
   color: #f8dbc9;
+  transform: scale(1.2);
 }
 
 @media (min-width: 769px) {

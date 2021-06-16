@@ -20,6 +20,7 @@
 }
 .fa:hover {
   color: $background-clr;
+  transform: scale(1.2);
 }
 
 @media (min-width: $tablet) {
