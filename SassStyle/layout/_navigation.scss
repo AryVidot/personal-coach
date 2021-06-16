@@ -6,6 +6,7 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+  box-shadow: 0 0 2px 0 $primary-clr;
 }
 .logo {
   width: auto;
@@ -13,6 +14,7 @@ header {
   img {
     width: 70px;
     max-width: 100%;
+    height: 100%;
   }
 }
 .nav {
@@ -40,7 +42,8 @@ header {
   text-decoration: none;
   color: $primary-clr;
   text-transform: uppercase;
-  font-size: $medium-heading;
+  font-size: $small-heading;
+  font-size: 1rem;
   font-family: $title-ft;
   font-weight: bold;
   letter-spacing: 5px;
@@ -55,6 +58,9 @@ header {
 
 .nav__item {
   margin-top: 0.75em;
+  display: block;
+  margin: auto;
+  padding: 0.625em 0;
 }
 .nav__item::after {
   content: " ";
@@ -84,7 +90,7 @@ header {
   transition: opacity 250ms ease;
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 16px;
 }
 .nav-toggle:focus,
 .nav-toggle:hover {
@@ -137,5 +143,13 @@ header {
   }
   .nav__item {
     margin: 0 0 0 1.5em;
+    // .nav__link {
+    //   font-size: $small-heading;
+    // }
   }
 }
+// @media (min-width: $small-latop) {
+//   .nav__link {
+//     font-size: $small-heading;
+//   }
+// }

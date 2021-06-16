@@ -76,7 +76,7 @@ section {
   padding: 50px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   section {
     padding: 100px 0;
   }
@@ -97,7 +97,7 @@ section {
   transition: all 0.3s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .btn {
     font-size: 1.125rem;
   }
@@ -126,13 +126,46 @@ section {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .card {
     width: 30%;
     margin-bottom: 2rem;
   }
   .card + .card {
     margin-top: 0;
+  }
+}
+
+.social {
+  position: fixed;
+  top: 70%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #eb5e50;
+  padding: 10px 0;
+  border-radius: 15px 0 0 15px;
+  z-index: 2000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.social .social__logo {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.fa {
+  color: #033d68;
+}
+
+.fa:hover {
+  color: #f8dbc9;
+}
+
+@media (min-width: 769px) {
+  .social__logo {
+    padding: 10px;
+    font-size: 2rem;
   }
 }
 
@@ -144,6 +177,7 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+  box-shadow: 0 0 2px 0 #033d68;
 }
 
 .logo {
@@ -154,6 +188,7 @@ header {
 .logo img {
   width: 70px;
   max-width: 100%;
+  height: 100%;
 }
 
 .nav {
@@ -185,7 +220,8 @@ header {
   text-decoration: none;
   color: #033d68;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  font-size: 1rem;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   letter-spacing: 5px;
@@ -200,6 +236,9 @@ header {
 
 .nav__item {
   margin-top: 0.75em;
+  display: block;
+  margin: auto;
+  padding: 0.625em 0;
 }
 
 .nav__item::after {
@@ -228,7 +267,7 @@ header {
   transition: opacity 250ms ease;
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 16px;
 }
 
 .nav-toggle:focus,
@@ -266,7 +305,7 @@ header {
   transform: translateY(3px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   header {
     box-shadow: 0 0 2px 0 #033d68;
   }
@@ -400,7 +439,7 @@ button:hover {
   border-color: #033d68;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .contact-form-container {
     width: 70%;
     max-width: 900px;
@@ -426,7 +465,7 @@ footer a {
   width: 90%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .row {
     display: flex;
     justify-content: space-between;
@@ -484,7 +523,7 @@ footer a {
   margin-bottom: 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .hero__text {
     width: 80%;
   }
@@ -524,7 +563,7 @@ footer a {
   line-height: 1.3;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .about__text {
     width: 32%;
   }
@@ -549,7 +588,7 @@ footer a {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .service-row {
     display: flex;
     flex-wrap: wrap;
@@ -577,6 +616,8 @@ footer a {
   flex-direction: column;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-family: "Playfair Display", serif;
 }
 
 .testimonial-card .testimonial-card__reviewer .testimonial-card__reviewer--content .testimonial-card__reviewer--name {
@@ -613,7 +654,10 @@ footer a {
   color: #225175;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+  .testimonial-card__reviewer--content {
+    font-size: 1.125rem !important;
+  }
   .one {
     grid-column: 1/3;
   }
