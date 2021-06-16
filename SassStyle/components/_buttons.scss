@@ -2,11 +2,13 @@
   font-family: $body-ft;
   text-decoration: none;
   padding: 1.5rem;
+  margin-top: 2rem;
   background-color: $primary-clr;
   color: $background-clr;
   //   border-radius: 10px;
   font-size: $xsmall;
   transition: 0.3s;
+  text-align: center;
 }
 .btn:hover {
   opacity: 0.7;
@@ -17,5 +19,11 @@
 @media (min-width: $tablet) {
   .btn {
     font-size: $small-heading;
+    padding: 1.5rem;
   }
 }
+// @media (min-width: $small-mobile) {
+//   .btn {
+//     margin-bottom: 2rem;
+//   }
+// }

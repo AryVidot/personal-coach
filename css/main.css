@@ -35,13 +35,19 @@ p {
   margin-bottom: 1em;
 }
 
-.section-title h1::after {
+h1.section-title::after {
   content: "";
   display: block;
   border: 1px solid;
-  border-color: #f8dbc9;
-  margin-top: 0.5em;
-  width: 20%;
+  width: 30%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+  h1.section-title::after {
+    width: 10%;
+  }
 }
 
 *,
@@ -86,10 +92,12 @@ section {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   padding: 1.5rem;
+  margin-top: 2rem;
   background-color: #033d68;
   color: #f8dbc9;
   font-size: 1rem;
   transition: 0.3s;
+  text-align: center;
 }
 
 .btn:hover {
@@ -100,11 +108,15 @@ section {
 @media (min-width: 769px) {
   .btn {
     font-size: 1.125rem;
+    padding: 1.5rem;
   }
 }
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
@@ -112,6 +124,9 @@ section {
 
 .card .card__container {
   padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card .card__container p:nth-last-child(1) {
@@ -130,6 +145,7 @@ section {
   .card {
     width: 30%;
     margin-bottom: 2rem;
+    position: relative;
   }
   .card + .card {
     margin-top: 0;
@@ -142,7 +158,7 @@ section {
   right: 0;
   display: flex;
   flex-direction: column;
-  background-color: #eb5e50;
+  background-color: #e63946;
   padding: 10px 0;
   border-radius: 15px 0 0 15px;
   z-index: 2000;
@@ -525,6 +541,16 @@ footer a {
   margin-bottom: 2em;
 }
 
+@media (max-width: 320px) {
+  .hero__text {
+    width: 80%;
+  }
+  .hero__text p {
+    font-size: 1rem;
+    padding-bottom: 1.5em;
+  }
+}
+
 @media (min-width: 769px) {
   .hero__text {
     width: 80%;
@@ -563,6 +589,13 @@ footer a {
 
 .about__text p {
   line-height: 1.3;
+}
+
+@media (max-width: 320px) {
+  .about__text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 @media (min-width: 769px) {

@@ -31,6 +31,15 @@
 }
 
 // Media
+@media (max-width: $small-mobile) {
+  .hero__text {
+    width: 80%;
+    p {
+      font-size: 1rem;
+      padding-bottom: 1.5em;
+    }
+  }
+}
 @media (min-width: $tablet) {
   // .hero {
   //   padding: 100px 0;

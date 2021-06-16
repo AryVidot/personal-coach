@@ -19,6 +19,15 @@
 }
 
 // Media
+
+@media (max-width: $small-mobile) {
+  .about__text {
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
 @media (min-width: $tablet) {
   .about__text {
     width: 32%;
