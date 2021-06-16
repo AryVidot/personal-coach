@@ -2,16 +2,25 @@
 // Nav Toggle
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
-const navItem = document.querySelectorAll(".nav__item");
+const navLink = document.querySelectorAll(".nav__link");
+
+navLink.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    // console.log("na");
+    nav.classList.toggle("nav--visible");
+  });
+});
 
 navToggle.addEventListener("click", () => {
   nav.classList.toggle("nav--visible");
+  // console.log("clicked Toggle");
   // nav.classList.toggle("nav--toggled");
 });
-navItem.addEventListener("click", () => {
-  nav.classList.remove("nav--visible");
-  // nav.classList.remove("nav--toggled");
-});
+
+// navLink.addEventListener("click", () => {
+//   nav.classList.toggle("nav--visible");
+//   console.log("clicked");
+// });
 
 // MODAL
 // const modal = document.querySelector(".modal");

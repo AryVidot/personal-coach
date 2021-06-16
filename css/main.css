@@ -180,6 +180,11 @@ header {
   box-shadow: 0 0 2px 0 #033d68;
 }
 
+header .nav--toggled {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .logo {
   width: auto;
   align-items: center;
@@ -198,25 +203,30 @@ header {
   z-index: 2;
 }
 
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
-}
-
-.nav--toggled {
-  height: 100vh;
-  overflow: hidden;
-}
-
-.nav__list {
+.nav .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
   justify-content: space-between;
 }
 
-.nav__link {
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav__item {
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  cursor: pointer;
+}
+
+.nav__item .nav__link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
   text-decoration: none;
   color: #033d68;
   text-transform: uppercase;
@@ -227,33 +237,24 @@ header {
   letter-spacing: 5px;
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__item .nav__link:hover, .nav__item .nav__link:focus {
   opacity: 0.75;
-  display: inline-block;
-  border-color: #033d68;
 }
 
-.nav__item {
-  margin-top: 0.75em;
+.nav__item .nav__link::after {
+  content: "";
+  position: absolute;
   display: block;
-  margin: auto;
-  padding: 0.625em 0;
-}
-
-.nav__item::after {
-  content: " ";
-  display: block;
-  width: 0;
+  width: 0%;
   height: 2px;
+  left: 0;
   background-color: #033d68;
-  transition: width 0.3s;
+  transition: all 0.2s ease-in-out;
 }
 
-.nav__item:hover::after {
+.nav__item .nav__link:hover::after {
   width: 100%;
-  transition: width 0.3s;
-  display: block;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-toggle {

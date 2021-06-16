@@ -7,6 +7,10 @@ header {
   left: 0;
   z-index: 10;
   box-shadow: 0 0 2px 0 $primary-clr;
+  .nav--toggled {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 .logo {
   width: auto;
@@ -22,58 +26,57 @@ header {
   height: 0;
   position: absolute;
   z-index: 2;
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+  }
 }
 .nav--visible {
   visibility: visible;
   height: auto;
   position: relative;
 }
-.nav--toggled {
-  height: 100vh;
-  overflow: hidden;
-}
-.nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  justify-content: space-between;
-}
-.nav__link {
-  text-decoration: none;
-  color: $primary-clr;
-  text-transform: uppercase;
-  font-size: $small-heading;
-  font-size: 1rem;
-  font-family: $title-ft;
-  font-weight: bold;
-  letter-spacing: 5px;
-}
-
-.nav__link:hover,
-.nav__link:focus {
-  opacity: 0.75;
-  display: inline-block;
-  border-color: $primary-clr;
-}
 
 .nav__item {
-  margin-top: 0.75em;
-  display: block;
   margin: auto;
-  padding: 0.625em 0;
-}
-.nav__item::after {
-  content: " ";
+  margin-top: 1em;
   display: block;
-  width: 0;
-  height: 2px;
-  background-color: $primary-clr;
-  transition: width 0.3s;
-}
-.nav__item:hover::after {
-  width: 100%;
-  transition: width 0.3s;
-  display: block;
+  cursor: pointer;
+  .nav__link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary-clr;
+    text-transform: uppercase;
+    font-size: $small-heading;
+    font-size: 1rem;
+    font-family: $title-ft;
+    font-weight: bold;
+    letter-spacing: 5px;
+    &:hover,
+    &:focus {
+      opacity: 0.75;
+      // display: inline-block;
+      // border-color: $primary-clr;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      background-color: $primary-clr;
+      transition: $animate;
+    }
+    &:hover::after {
+      width: 100%;
+      transition: $animate;
+    }
+  }
 }
 
 // Hamburger
